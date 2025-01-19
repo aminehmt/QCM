@@ -74,7 +74,6 @@ def enregistrer_resultat(users, identifiant, score): #save resultat bch thato f 
     sauvegarder_utilisateurs(users)
 
 
-
 def exporter_resultats(users, fichier="resultats.csv"): #had la fonction t'exporti les résultats des users dans un fichiers CSV
     with open(fichier, 'w', newline='') as file:
         writer = csv.writer(file)
@@ -108,5 +107,5 @@ def main(): # c'est la fonction principale donc tdir déroulement te3 l QCM
         print(f"{i}. {test['date']} - Score : {test['score']}")
     exporter_resultats(users) #le resultat est exporté fel fichier CSV
 
-if name == "main": # condition pour executer la fonction mais donc bch yebda l qcm et tverifier si script yet executa directement 
+if  __name__ == "__main__": # condition pour executer la fonction mais donc bch yebda l qcm et tverifier si script yet executa directement 
     main()
