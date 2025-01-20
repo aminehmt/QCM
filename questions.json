@@ -1,0 +1,35 @@
+{
+  "questions": [
+      {
+          "question": "Quel est le langage principal utilisé pour l'intelligence artificielle ?",
+          "options": ["Java", "Python", "C++", "JavaScript"],
+          "reponse": 1,
+          "categorie": "Python"
+      },
+      {
+          "question": "Quelle bibliothèque Python est utilisée pour l'apprentissage automatique ?",
+          "options": ["Pandas", "NumPy", "scikit-learn", "Matplotlib"],
+          "reponse": 2,
+          "categorie": "Python"
+      },
+      {
+          "question": "Quelle structure de données est mutable en Python ?",
+          "options": ["Tuple", "Liste", "Chaîne", "Entier"],
+          "reponse": 1,
+          "categorie": "Python"
+      },
+      {
+          "question": "Comment déclare-t-on une fonction en Python ?",
+          "options": ["func ma_fonction()", "function ma_fonction()", "def ma_fonction()", "declare ma_fonction()"],
+          "reponse": 2,
+          "categorie": "Python"
+      },
+      {
+          "question": "Quelle commande est utilisée pour installer un package Python ?",
+          "options": ["install", "pip install", "python install", "pkg install"],
+          "reponse": 1,
+          "categorie": "Python"
+      }
+    
+    ]
+  }

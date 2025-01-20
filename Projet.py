@@ -5,14 +5,26 @@ from datetime import datetime
 import signal
 
 def charger_utilisateurs(): #fonction pour utilisateurs
-    if os.path.exists('users.json'): #il faut cree le fichier users.json par la suite
-        with open('users.json', 'r') as file:
-            return json.load(file)
+    if os.path.exists('users.json'):
+        with open('users.json', 'r') as file: #ouverture du fichier
+            try:
+                return json.load(file)
+            except json.JSONDecodeError: #gestion derreur 
+                print("Erreur : Le fichier users.json est corrompu. Voulez vous le reinitialiser ? (O/N)")
+                choix = input().strip().lower()
+                if choix == 'O':
+                    return {} #reinitialisation du fichier(vide)
+                else:
+                    print("Fermeture de l'application.")
+                    exit()
     return {}
 
 def sauvegarder_utilisateurs(users): #fonction pour sauvegarder les utilisateurs
-    with open('users.json', 'w') as file:
-        json.dump(users, file, indent=4)
+    try:
+        with open('users.json', 'w') as file:
+            json.dump(users, file, indent=4) #ecriture des donnees
+    except IOError as e: #en cas derreur
+        print(f"Erreur lors de la sauvegarde : {e}")
 
 def authentification(users):   #fonction pour la connexion
     identifiant = input("Entrez votre identifiant : ")
