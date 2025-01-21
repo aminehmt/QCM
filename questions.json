@@ -1,5 +1,6 @@
 {
   "questions": [
+
       {
           "question": "Quel est le langage principal utilisé pour l'intelligence artificielle ?",
           "options": ["Java", "Python", "C++", "JavaScript"],
@@ -29,7 +30,251 @@
           "options": ["install", "pip install", "python install", "pkg install"],
           "reponse": 1,
           "categorie": "Python"
-      }
+      },
+
+
+      {
+        "question": "Quelle bibliothèque Python est utilisée pour manipuler les données ?",
+        "options": ["Pandas", "Requests", "BeautifulSoup", "Flask"],
+        "reponse": 0,
+        "categorie": "Python"
+    },
+    {
+        "question": "Quelle est la syntaxe correcte pour un commentaire en Python ?",
+        "options": ["// commentaire", "/* commentaire */", "# commentaire", "<!-- commentaire -->"],
+        "reponse": 2,
+        "categorie": "Python"
+    },
+    {
+        "question": "Comment appelle-t-on une variable globale en Python ?",
+        "options": ["global var", "let var", "global(var)", "use var"],
+        "reponse": 0,
+        "categorie": "Python"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour ajouter un élément à une liste en Python ?",
+        "options": ["add()", "append()", "push()", "insert()"],
+        "reponse": 1,
+        "categorie": "Python"
+    },
+    {
+        "question": "Comment afficher 'Bonjour' en Python ?",
+        "options": ["echo 'Bonjour'", "print('Bonjour')", "printf('Bonjour')", "cout << 'Bonjour'"],
+        "reponse": 1,
+        "categorie": "Python"
+    },
+
+
+
+
+
+
+
+
+
+    
+    {
+        "question": "Quelle est la complexité du tri par insertion dans le pire des cas ?",
+        "options": ["O(n)", "O(n^2)", "O(log n)", "O(n log n)"],
+        "reponse": 1,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel algorithme est utilisé pour trouver le plus court chemin dans un graphe pondéré ?",
+        "options": ["DFS", "Dijkstra", "BFS", "Prim"],
+        "reponse": 1,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel est le temps moyen de recherche dans une table de hachage ?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "reponse": 0,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel algorithme est utilisé pour trier un tableau en O(n log n) ?",
+        "options": ["Insertion Sort", "Merge Sort", "Bubble Sort", "Selection Sort"],
+        "reponse": 1,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel est le principe de l'algorithme Divide and Conquer ?",
+        "options": ["Fusionner et trier", "Diviser pour régner", "Répéter et itérer", "Explorer et trier"],
+        "reponse": 1,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel est l'algorithme utilisé pour trouver un cycle dans un graphe ?",
+        "options": ["Dijkstra", "DFS", "Prim", "Kruskal"],
+        "reponse": 1,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quelle est la complexité de l'algorithme de recherche binaire ?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "reponse": 2,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel algorithme est utilisé pour trier en place avec une complexité O(n^2) ?",
+        "options": ["Merge Sort", "Heap Sort", "Insertion Sort", "Quick Sort"],
+        "reponse": 2,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quel est l'objectif de l'algorithme de Prim ?",
+        "options": ["Trouver un arbre couvrant minimal", "Trouver un cycle minimal", "Trouver le plus court chemin", "Explorer tous les nœuds"],
+        "reponse": 0,
+        "categorie": "Algorithmes"
+    },
+    {
+        "question": "Quelle méthode permet d'éviter les collisions dans une table de hachage ?",
+        "options": ["Double Hashing", "Chaining", "Linear Probing", "Toutes les réponses"],
+        "reponse": 3,
+        "categorie": "Algorithmes"
+    },
+
+
+
+
+
+
+
+
+
+    
+    {
+        "question": "Quel protocole est utilisé pour envoyer des emails ?",
+        "options": ["HTTP", "SMTP", "FTP", "IMAP"],
+        "reponse": 1,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quelle est la taille maximale d'un paquet IP ?",
+        "options": ["64 KB", "32 KB", "128 KB", "16 KB"],
+        "reponse": 0,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quel est le port par défaut pour HTTPS ?",
+        "options": ["21", "22", "80", "443"],
+        "reponse": 3,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quel est le rôle du protocole DNS ?",
+        "options": [
+            "Attribuer des adresses IP",
+            "Convertir les noms de domaine en adresses IP",
+            "Établir une connexion sécurisée",
+            "Transférer des fichiers"
+        ],
+        "reponse": 1,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quelle commande permet de vérifier la connectivité réseau ?",
+        "options": ["ping", "ls", "grep", "netstat"],
+        "reponse": 0,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quel modèle est utilisé pour les protocoles réseau ?",
+        "options": ["TCP/IP", "OSI", "HTTP", "UDP"],
+        "reponse": 1,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quel est le rôle d'un switch dans un réseau ?",
+        "options": [
+            "Fournir une connexion internet",
+            "Répéter le signal",
+            "Transférer des données entre les appareils",
+            "Convertir les adresses IP"
+        ],
+        "reponse": 2,
+        "categorie": "Réseaux"
+    },
+
+
+
+
+    
+
+
+
+
+    
+    {
+        "question": "Quel type de clé est utilisée dans une base de données pour identifier une ligne de manière unique ?",
+        "options": ["Clé primaire", "Clé étrangère", "Index", "Trigger"],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quel langage est utilisé pour interroger une base de données relationnelle ?",
+        "options": ["SQL", "HTML", "CSS", "JavaScript"],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle commande SQL permet d’ajouter une nouvelle ligne dans une table ?",
+        "options": ["INSERT", "UPDATE", "DELETE", "SELECT"],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle est la signification de l'acronyme ACID en bases de données ?",
+        "options": [
+            "Atomicité, Cohérence, Isolation, Durabilité",
+            "Authenticité, Cohérence, Intégrité, Durabilité",
+            "Atomicité, Cohérence, Intégrité, Disponibilité",
+            "Authenticité, Cohérence, Isolation, Disponibilité"
+        ],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle clause SQL est utilisée pour trier les résultats ?",
+        "options": ["ORDER BY", "GROUP BY", "SORT", "FILTER"],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle clause SQL permet de filtrer les résultats selon une condition ?",
+        "options": ["WHERE", "HAVING", "FILTER", "GROUP"],
+        "reponse": 0,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle commande SQL est utilisée pour modifier une table existante ?",
+        "options": ["UPDATE", "ALTER", "MODIFY", "CHANGE"],
+        "reponse": 1,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quel type de jointure renvoie uniquement les lignes qui correspondent dans deux tables ?",
+        "options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "OUTER JOIN"],
+        "reponse": 2,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quelle commande SQL est utilisée pour supprimer une table ?",
+        "options": ["DELETE", "DROP", "REMOVE", "TRUNCATE"],
+        "reponse": 1,
+        "categorie": "Bases de données"
+    },
+    {
+        "question": "Quel est le rôle d'une clé étrangère dans une base de données ?",
+        "options": [
+            "Garantir l’unicité des valeurs",
+            "Créer une relation entre deux tables",
+            "Indexer les données",
+            "Optimiser les performances"
+        ],
+        "reponse": 1,
+        "categorie": "Bases de données"
+    }
     
     ]
   }
