@@ -8,6 +8,68 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 users_file = os.path.join(script_dir, 'users.json')
 questions_file = os.path.join(script_dir, 'questions.json')
 
+
+def sauvegarder_utilisateurs(users): #fct sauvegarde des infos du user
+    try:
+        with open(users_file, 'w', encoding='utf-8') as file:
+            json.dump(users, file, indent=4)
+    except IOError as e:
+        print(f"Erreur lors de la sauvegarde : {e}")
+
+
+def charger_questions(categorie=None):#fct chargement liste de questions
+    try:
+        with open(questions_file, 'r', encoding='utf-8') as file:
+            questions = json.load(file)["questions"]
+            if categorie:
+                questions = [q for q in questions if q.get("categorie") == categorie]
+            return questions
+    except FileNotFoundError:
+        print("Erreur : Le fichier questions.json est introuvable.")
+        return []
+    except json.JSONDecodeError:
+        print("Erreur : Le fichier questions.json est corrompu.")
+        return []
+
+
+def passer_test(questions, limite_par_question=30):#pour imposer une limite de temp
+    score = 0
+    for i, q in enumerate(questions):
+        print(f"\nQuestion {i + 1}: {q['question']}")
+        for j, option in enumerate(q['options']):
+            print(f"{j + 1}. {option}")
+        
+        timer_expired_event = threading.Event()
+        timer = threading.Timer(limite_par_question, limite_temps_timer, [timer_expired_event])
+        timer.start()
+
+        try:
+            print(f"Vous avez {limite_par_question} secondes pour répondre.")
+            reponse = input("Votre réponse (1-4) : ").strip()
+            timer.cancel()
+
+            if timer_expired_event.is_set():
+                raise TimeoutError
+            
+            if reponse.isdigit() and int(reponse) - 1 == q['reponse']:
+                print("Correct ! ✅")
+                score += 1
+            else:
+                print(f"Incorrect ❌. La bonne réponse était : {q['options'][q['reponse']]}")
+        except TimeoutError:
+            print("\nTemps écoulé pour cette question. Passons à la suivante.")
+    return score
+
+
+def exporter_resultats(users, fichier="resultats.csv"):#exportation des resultats des users dans le fichier csv
+    with open(fichier, 'w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Identifiant", "Date", "Score"])
+        for user, data in users.items():
+            for test in data["historique"]:
+                writer.writerow([user, test["date"], test["score"]])
+    print(f"Résultats exportés dans le fichier {fichier}.")
+
 def charger_utilisateurs():
     if os.path.exists(users_file):
         with open(users_file, 'r', encoding='utf-8') as file:
@@ -28,7 +90,7 @@ def authentification(users):
         identifiant = input("Entrez votre identifiant : ").strip()
         if identifiant:
             if identifiant in users:
-                print(f"Bienvenue de retour, {identifiant} ! Voici votre historique :")
+                print(f"Bienvenue vous etes de retour, {identifiant} ! Voici votre historique :")
                 for i, test in enumerate(users[identifiant]["historique"], 1):
                     print(f"{i}. {test['date']} - Score : {test['score']}")
             else:
