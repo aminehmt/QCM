@@ -69,10 +69,10 @@ def passer_test(questions, limite_par_question=30):
             reponse = int(input("Votre réponse (1-4) : ")) - 1
             signal.alarm(0) #reponda a temps desactiver timer
             if reponse == q['reponse']:
-                print("Correct ! ")
+                print("Correct ! ✅")
                 score += 1
             else:
-                print(f"Incorrect . La bonne réponse était : {q['options'][q['reponse']]}")
+                print(f"Incorrect ❌. La bonne réponse était : {q['options'][q['reponse']]}")
         except TimeoutError: #depassa le temps 
             print("\nTemps écoulé pour cette question. Passons à la suivante.")
             signal.alarm(0)
