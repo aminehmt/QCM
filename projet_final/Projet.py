@@ -80,7 +80,14 @@ def passer_test(questions, limite_par_question=30):#pour imposer une limite de t
 
         try:
             print(f"Vous avez {limite_par_question} secondes pour répondre.")
-            reponse = input("Votre réponse (1-4) : ").strip()
+            reponse = None
+            while not timer_expired_event.is_set():
+                reponse = input("Votre réponse (1-4) : ").strip()
+                if not reponse.isdigit() or not (1 <= int(reponse) <= 4):#gestion reponse entre 1-4 seulement
+                    print("Veuillez choisir une option valide entre 1 et 4.")
+                else:
+                    break
+
             timer.cancel()
 
             if timer_expired_event.is_set():
