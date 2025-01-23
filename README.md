@@ -9,7 +9,6 @@ Ce projet est une application interactive de quiz qui permet aux utilisateurs de
 - **Chronomètre** : Chaque question est limitée dans le temps (par défaut : 30 secondes).
 - **Suivi des scores** : L'historique des scores est sauvegardé pour chaque utilisateur.
 - **Export des résultats** : Les scores sont exportables au format CSV.
-- **Utilisable sur tous les OS** : Il existe deux version du programme, l'une pour Windows, et l'autre pour MAC/LINUX.
 
 ## Prérequis
 
