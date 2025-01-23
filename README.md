@@ -23,29 +23,8 @@ Ce projet est une application interactive de quiz qui permet aux utilisateurs de
    - `users.json` (pour sauvegarder les données utilisateur, sera créé automatiquement s'il n'existe pas)
    - `questions.json` (doit contenir les questions au format JSON)
 
-### Exemple de fichier `questions.json`
-```json
-{
-    "questions": [
-      {
-        "question": "Quelle méthode est utilisée pour ajouter un élément à une liste en Python ?",
-        "options": ["add()", "append()", "push()", "insert()"],
-        "reponse": 1,
-        "categorie": "Python"
-    },
-    {
-        "question": "Comment afficher 'Bonjour' en Python ?",
-        "options": ["echo 'Bonjour'", "print('Bonjour')", "printf('Bonjour')", "cout << 'Bonjour'"],
-        "reponse": 1,
-        "categorie": "Python"
-    },
-
-    ]
-}
-
 ## Exemple d'exécution
 
-```text
 Entrez votre identifiant : 23
 Nouvel utilisateur détecté. Création du profil...
 
@@ -129,3 +108,23 @@ Score final : 1/7
 Historique mis à jour 😊
 1. 2025-01-23 08:30:48 - Score : 1 - Temps : 6.36 secondes
 Résultats exportés dans le fichier resultats.csv.
+
+### Exemple de fichier `questions.json`
+```json
+{
+    "questions": [
+      {
+        "question": "Quelle méthode est utilisée pour ajouter un élément à une liste en Python ?",
+        "options": ["add()", "append()", "push()", "insert()"],
+        "reponse": 1,
+        "categorie": "Python"
+    },
+    {
+        "question": "Comment afficher 'Bonjour' en Python ?",
+        "options": ["echo 'Bonjour'", "print('Bonjour')", "printf('Bonjour')", "cout << 'Bonjour'"],
+        "reponse": 1,
+        "categorie": "Python"
+    },
+
+    ]
+}
