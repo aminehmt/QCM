@@ -195,6 +195,29 @@
         "reponse": 2,
         "categorie": "Réseaux"
     },
+    {
+        "question": "Quel protocole est utilisé pour récupérer les emails sur un serveur distant ?",
+        "options": ["SMTP", "POP3", "DNS", "ARP"],
+        "reponse": 1,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quelle adresse IP est utilisée pour le loopback ?",
+        "options": ["127.0.0.1", "192.168.1.1", "10.0.0.1", "255.255.255.255"],
+        "reponse": 0,
+        "categorie": "Réseaux"
+    },
+    {
+        "question": "Quel est le rôle principal d'un routeur dans un réseau ?",
+        "options": [
+            "Transférer des paquets entre différents réseaux",
+            "Assigner des adresses IP aux appareils",
+            "Fournir une connexion directe aux serveurs",
+            "Créer des noms de domaine"
+        ],
+        "reponse": 0,
+        "categorie": "Réseaux"
+    },
 
 
 

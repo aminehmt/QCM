@@ -24,5 +24,32 @@
                 "temps_total": 251.65
             }
         ]
+    },
+    "22": {
+        "historique": [
+            {
+                "date": "2025-01-23 08:27:16",
+                "score": 4,
+                "temps_total": 139.23
+            }
+        ]
+    },
+    "23": {
+        "historique": [
+            {
+                "date": "2025-01-23 08:30:48",
+                "score": 1,
+                "temps_total": 6.36
+            }
+        ]
+    },
+    "11": {
+        "historique": [
+            {
+                "date": "2025-01-23 08:35:23",
+                "score": 0,
+                "temps_total": 6.59
+            }
+        ]
     }
 }
